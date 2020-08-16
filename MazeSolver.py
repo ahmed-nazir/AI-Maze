@@ -46,7 +46,6 @@ im.save('Before.jpg', quality=100)
 
 traversed = [(startY,startX)]
 node = []
-completenode = []
 path = [(startY,startX)]
 def moveLeft():
     if startX>0:
