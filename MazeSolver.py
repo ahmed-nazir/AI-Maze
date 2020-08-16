@@ -1,5 +1,6 @@
 from PIL import Image, ImageDraw
 import sys
+import time
 
 im = Image.new('RGB', (1000, 1000), (255, 255, 255))
 draw = ImageDraw.Draw(im)
@@ -43,7 +44,9 @@ for i in range(20):
             endi = i
             endj = j
 im.save('Before.jpg', quality=100)
-
+im1 = Image.open(r"Before.jpg")
+im1.show()
+time.sleep(10)
 traversed = [(startY,startX)]
 node = []
 path = [(startY,startX)]
@@ -126,3 +129,5 @@ def TRAVERSED():
 PATH()
 
 im.save('Finished.jpg', quality=100)
+im1 = Image.open(r"Finished.jpg")
+im1.show()
